@@ -1,0 +1,40 @@
+.services {
+    text-align: center;
+    padding: 56px 0;
+
+    &__title {
+        @include content-title();
+        font-size: 24px;
+    }
+
+    &__description {
+        @include content-description();
+        max-width: 719px;
+        margin: 0 auto;
+        padding: 16px 0 20px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 70px;
+        justify-content: center;
+    }
+
+    &__card {
+        background: #ffffff;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 24px 58px;
+
+        &-title {
+            @include content-title();
+            font-size: 20px;
+            padding: 16px;
+        }
+
+        &-description {
+            @include content-description();
+        }
+    }
+}
