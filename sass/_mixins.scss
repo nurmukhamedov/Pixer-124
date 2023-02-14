@@ -1,0 +1,17 @@
+@mixin centerItems {
+    display: flex;
+    align-items: center;
+}
+
+@mixin content-title {
+    font-weight: 700;
+    line-height: 130%;
+    color: $black-color;
+}
+
+@mixin content-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+}

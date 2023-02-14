@@ -4,8 +4,57 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .container {
   max-width: 1130px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.services {
+  text-align: center;
+  padding: 56px 0;
+}
+.services__title {
+  font-weight: 700;
+  line-height: 130%;
+  color: #000;
+  font-size: 24px;
+}
+.services__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  max-width: 719px;
+  margin: 0 auto;
+  padding: 16px 0 20px;
+}
+.services__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 70px;
+  justify-content: center;
+}
+.services__card {
+  background: #ffffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 24px 58px;
+}
+.services__card-title {
+  font-weight: 700;
+  line-height: 130%;
+  color: #000;
+  font-size: 20px;
+  padding: 16px;
+}
+.services__card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
 }/*# sourceMappingURL=main.css.map */
