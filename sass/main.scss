@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixins";
+@import './variables';
+@import './mixins';
 
 * {
 	padding: 0;
@@ -11,4 +11,7 @@
 	margin: 0 auto;
 	padding: 0 15px;
 }
-@import "./all-blocks/all-blocks";
+body{
+	background-color: $main-color;
+}
+@import './all-blocks/all-blocks';

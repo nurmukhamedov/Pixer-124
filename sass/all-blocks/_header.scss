@@ -1,0 +1,49 @@
+.main{
+   @include centerItem();
+   justify-content: space-between;
+   margin-top: 40px;
+   @include tablet() {
+    flex-direction: column;
+   }
+    &__left{
+        &-title{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 130%;
+            color: #000000;
+            flex: none;
+            order: 0;
+            align-self: flex-start;
+            flex-grow: 0; 
+            max-width: 462px;
+        }
+        &-text{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+            flex: none;
+            order: 1;
+            align-self: center;
+            flex-grow: 0;
+            max-width: 465px;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        &-btn{
+            border: none;
+            background: #00BAFC;
+            border-radius: 5px;
+            padding: 8px 16px; 
+            color: $main-color;
+        }
+    }
+    &__right{
+        &-iframe{
+            border-radius: 10px;
+            max-width: 498px;
+            height: 258px;
+            margin-top: 30px;
+        }
+    }
+}
