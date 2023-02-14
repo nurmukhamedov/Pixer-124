@@ -1,0 +1,110 @@
+nav {
+    padding: 8px 0;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    &__ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        column-gap: 32px;
+        &-item:last-child {
+            margin-left: -8px;
+            .menu__ul-link {
+                // style
+                padding: 8px 16px;
+                background: #00BAFC;
+                border-radius: 5px;
+                // text
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 160%;
+                color: #FFFFFF;
+                @include for-nav {
+                    color: #00BAFC;
+                    background-color: #FFFFFF;
+                }
+            }
+            @include for-nav {
+                margin: 0;
+            }
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color: #000000;
+            text-decoration: none;
+        }
+        @include for-nav {
+            margin-top: 70px;
+            flex-direction: column;
+            row-gap: 32px;
+        }
+    }
+    @include for-nav {
+        top: 0;
+        right: -100%;
+        background-color: #00bafc;
+        position: fixed;
+        width: 400px;
+        height: 1000vh;
+        transition: .2s linear;
+    }
+}
+
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-label {
+    position: relative;
+    width: 28px;
+    height: 17px;
+    flex-direction: column;
+    row-gap: 4px;
+    display: none;
+    div {
+        width: 100%;
+        height: 3px;
+        border: none;
+        background-color: #000000;
+    }
+    @include for-nav {
+        display: flex;
+    }
+}
+
+.mobile-menu-checkbox:checked~.menu {
+    right: 0;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-label {
+    transform: translateY(10px);
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-label .mobile-menu-label-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-label .mobile-menu-label-center {
+    opacity: 0;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-label .mobile-menu-label-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}
